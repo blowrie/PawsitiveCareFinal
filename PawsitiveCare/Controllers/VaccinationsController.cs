@@ -16,9 +16,15 @@ namespace PawsitiveCare.Controllers
         private PCDbEntities db = new PCDbEntities();
 
         // GET: Vaccinations
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            var vaccinations = db.Vaccinations.Include(v => v.Pet);
+            var vaccinations = db.Vaccinations.Include(w => w.Pet);
+            if (id.HasValue)
+            {
+                vaccinations = vaccinations.Where(w => w.PetID == id.Value);
+
+            }
+
             return View(vaccinations.ToList());
         }
 
