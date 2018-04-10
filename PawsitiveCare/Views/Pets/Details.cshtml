@@ -2,10 +2,7 @@
 
 @{
     ViewBag.Title = "Details";
-    var WeightPlug = "";
 }
-
-<script src="~/Weight.js"></script>
 
 <h2>Details</h2>
 
@@ -68,7 +65,7 @@
         <dd>
             @Html.DisplayFor(model => model.Weight)
             @Html.ActionLink("View More", "Index", "Weights", new { id = Model.PetID }, new { })
-            <a onclick="DivSwap('Orig', 'Add')">Add Weight</a>
+            @Html.ActionLink("Add Weight", "Create", "Weights", new { id = Model.PetID}, new { })
         </dd>
 
         <dt>
@@ -94,7 +91,7 @@
     @Html.ActionLink("Back to List", "Index")
 </p>
 
-<div style="display:none" id="Swap">
+@*<div style="display:none" id="Swap">
     <div class="row">
         <div class="col-md-6" id="Wdate">
             @{ Html.RenderPartial("Weight"); }
@@ -109,7 +106,7 @@
 
 
 
-@*<script>
+<script>
     $.ajax({
         type: 'POST',
         url: "@Url.Action("FindWeight")",
