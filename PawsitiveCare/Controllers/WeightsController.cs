@@ -10,6 +10,7 @@ using PawsitiveCare;
 
 namespace PawsitiveCare.Controllers
 {
+    [Authorize]
     public class WeightsController : Controller
     {
         private PCDbEntities db = new PCDbEntities();
