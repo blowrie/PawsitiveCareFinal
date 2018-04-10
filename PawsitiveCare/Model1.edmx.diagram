@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ec26c646f2564fd98326a3f5e35927a1" Name="Diagram1">
+        <EntityTypeShape EntityType="PCDbModel.Document" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PCDbModel.Image" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PCDbModel.Pet" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PCDbModel.Surgery" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="PCDbModel.Vaccination" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PCDbModel.Visit" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <AssociationConnector Association="PCDbModel.FK_Documents_Pet" ManuallyRouted="false" />
+        <AssociationConnector Association="PCDbModel.FK_Image_Pet" ManuallyRouted="false" />
+        <AssociationConnector Association="PCDbModel.FK_Surgery_Pet" ManuallyRouted="false" />
+        <AssociationConnector Association="PCDbModel.FK_Vaccinations_Pet" ManuallyRouted="false" />
+        <AssociationConnector Association="PCDbModel.FK_Visit_Pet" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PCDbModel.C__MigrationHistory" Width="1.5" PointX="11.875" PointY="1.125" />
+        <EntityTypeShape EntityType="PCDbModel.AspNetRole" Width="1.5" PointX="5.75" PointY="4" />
+        <EntityTypeShape EntityType="PCDbModel.AspNetUserClaim" Width="1.5" PointX="7.25" PointY="11.75" />
+        <EntityTypeShape EntityType="PCDbModel.AspNetUserLogin" Width="1.5" PointX="7.25" PointY="1.25" />
+        <EntityTypeShape EntityType="PCDbModel.AspNetUser" Width="1.5" PointX="5" PointY="6.75" />
+        <EntityTypeShape EntityType="PCDbModel.Weight" Width="1.5" PointX="9.5" PointY="16.875" />
+        <AssociationConnector Association="PCDbModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="PCDbModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="PCDbModel.FK_Pet_AspNetUsers" />
+        <AssociationConnector Association="PCDbModel.FK_Weight_Pet" />
+        <AssociationConnector Association="PCDbModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
