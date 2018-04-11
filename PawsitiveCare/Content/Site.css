@@ -4,12 +4,11 @@
 }
 
 h1 {
-    font: 'Quicksand';
-    color: #f4e55f;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+    font-family: 'Rochester', cursive;
+    color: #f97087;
+    /*letter-spacing: 4px;*/
     text-align: center;
-    font-size: 40px;
+    font-size: 90px;
 }
 
 h3 {
@@ -122,7 +121,7 @@ body {
 
 #navbarpaw {
     font-size: 50px;
-    color: #f4e55f;
+    color: #e5e4dc;
 }
 
 /*Navbar Styling*/
@@ -132,10 +131,9 @@ body {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-transform: uppercase;
-    font-size: 15px;
-    color: #7a5b3d;
+    font-family: 'Rochester', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    color: #f4e55f;
 }
 
     .navbar-inverse .navbar-nav > li > a:hover {
@@ -155,6 +153,7 @@ a {
     background: none;
     border: 0px;
     width: auto;
+    align-content: flex-end;
 }
 
 button.navbar-toggle {

@@ -9,6 +9,12 @@ namespace PawsitiveCare.Controllers
     [Authorize]
     public class ImagesController : Controller
     {
+
+        public ActionResult Index()
+        {
+            return View(db.Images.ToList());
+        }
+
         private PCDbEntities db = new PCDbEntities();
         // GET: Images
         public ActionResult Add()
