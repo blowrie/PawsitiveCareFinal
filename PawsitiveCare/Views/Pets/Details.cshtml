@@ -6,85 +6,38 @@
 
 <h2>Details</h2>
 
-<div id="Orig">
-    <h4>Pet</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.PetName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PetName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BirthDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BirthDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PetType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PetType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Breed)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Breed)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PetPhoto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PetPhoto)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.WeightDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.WeightDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Weight)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Weight)
+<div class="container" id="Deets">
+    <div class="row" id="RowDeets">
+        <div class="col-md-8" id="LargeDeets">
+            <h1>@Html.DisplayFor(model => model.PetName)</h1>
+            <p>@Html.DisplayFor(model => model.BirthDate)</p>
+            <p>@Html.DisplayFor(model => model.PetType)</p>
+            <p>@Html.DisplayFor(model => model.IsFixed)</p>
+            <p>Image</p>
+        </div>
+        <div class="col-md-4" id="SmallDeets">
+            <h2>Weight</h2>
             @Html.ActionLink("View More", "Index", "Weights", new { id = Model.PetID }, new { })
-            @Html.ActionLink("Add Weight", "Create", "Weights", new { id = Model.PetID}, new { })
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.IsFixed)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.IsFixed)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UserID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UserID)
-        </dd>
-
-    </dl>
+            @Html.ActionLink("Add Weight", "Create", "Weights", new { id = Model.PetID }, new { })
+        </div>
+    </div>
+    <div class="row" id="RowDeets">
+        <div class="col-md-4" id="SmallDeets">
+            <h2>Surgeries</h2>
+        </div>
+    </div>
+    <div class="row" id="RowDeets">
+        <div class="col-md-4" id="SmallDeets">
+            <h2>Vaccinations</h2>
+        </div>
+            <div class="col-md-4" id="SmallDeets">
+                <h2>Documents</h2>
+            </div>
+            <div class="col-md-4" id="SmallDeets">
+                <h2>Visits</h2>
+            </div>
+            
+    </div>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.PetID }) |
