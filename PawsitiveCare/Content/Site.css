@@ -80,6 +80,19 @@ body {
     margin-bottom:50px;
 }
 
+#indexPanel {
+    z-index: 3;
+    background-color: rgba(91, 56, 62, .5);
+    height: 600px;
+    width: 97%;
+    margin-top: 50px;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
 .col-md-4.home-page {
     text-align: center;
 
