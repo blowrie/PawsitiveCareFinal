@@ -6,7 +6,48 @@
 
 <h2>Details</h2>
 
-<div id="Orig">
+<div class="container" id="Deets">
+    <div class="row" id="RowDeets">
+        <div class="col-md-8" id="LargeDeets">
+            <h1>@Html.DisplayFor(model => model.PetName)</h1>
+            <p>@Html.DisplayFor(model => model.BirthDate)</p>
+            <p>@Html.DisplayFor(model => model.PetType)</p>
+            <p>@Html.DisplayFor(model => model.IsFixed)</p>
+            <p>Image</p>
+        </div>
+        <div class="col-md-4" id="SmallDeets">
+            <h2>Weight</h2>
+            @Html.ActionLink("View More", "Index", "Weights", new { id = Model.PetID }, new { })
+            @Html.ActionLink("Add Weight", "Create", "Weights", new { id = Model.PetID }, new { })
+        </div>
+    </div>
+    <div class="row" id="RowDeets">
+        <div class="col-md-4" id="SmallDeets">
+            <h2>Surgeries</h2>
+            @Html.ActionLink("View More", "Index", "Surgeries", new { id = Model.PetID }, new { })
+            @Html.ActionLink("Add Surgery", "Create", "Surgeries", new { id = Model.PetID }, new { })
+        </div>
+    </div>
+    <div class="row" id="RowDeets">
+        <div class="col-md-4" id="SmallDeets">
+            <h2>Vaccinations</h2>
+            @Html.ActionLink("View More", "Index", "Vaccinations", new { id = Model.PetID }, new { })
+            @Html.ActionLink("Add Vaccination", "Create", "Vaccinations", new { id = Model.PetID }, new { })
+        </div>
+        <div class="col-md-4" id="SmallDeets">
+            <h2>Documents</h2>
+            @Html.ActionLink("View More", "Index", "Documents", new { id = Model.PetID }, new { })
+            @Html.ActionLink("Add Document", "Create", "Documents", new { id = Model.PetID }, new { })
+        </div>
+        <div class="col-md-4" id="SmallDeets">
+            <h2>Visits</h2>
+            @Html.ActionLink("View More", "Index", "Visits", new { id = Model.PetID }, new { })
+            @Html.ActionLink("Add Visit", "Create", "Visits", new { id = Model.PetID }, new { })
+        </div>
+    </div>
+</div>
+
+@*<div id="Orig">
     <h4>Pet</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -117,7 +158,7 @@
         </dd>
 
     </dl>
-</div>
+</div>*@
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.PetID }) |
     @Html.ActionLink("Back to List", "Index")

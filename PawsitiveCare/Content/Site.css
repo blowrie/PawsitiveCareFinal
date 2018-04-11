@@ -33,3 +33,27 @@ h2 {
 p {
     color: #e5e4dc;
 }
+
+/* Details Layout*/
+#Deets {
+    width: 1200px;
+}
+
+#RowDeets {
+    height: 400px;
+}
+
+#LargeDeets {
+    height: 800px;
+    width: 800px;
+    border: dashed;
+    border-bottom-color: black;
+}
+
+#SmallDeets {
+    height: 400px;
+    width: 400px;
+    border: dashed;
+    border-bottom-color: black;
+}
+/*End of Details Layout*/
