@@ -50,7 +50,8 @@
             @Html.DisplayFor(modelItem => item.Breed)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PetPhoto)
+            <img src="@Html.DisplayFor(modelItem => item.PetPhoto)"/>
+            @*<img src="@Url.Content(item.PetPhoto)" />*@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.WeightDate)

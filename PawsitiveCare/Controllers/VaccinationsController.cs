@@ -10,6 +10,7 @@ using PawsitiveCare;
 
 namespace PawsitiveCare.Controllers
 {
+    [Authorize]
     public class VaccinationsController : Controller
     {
         private PCDbEntities db = new PCDbEntities();

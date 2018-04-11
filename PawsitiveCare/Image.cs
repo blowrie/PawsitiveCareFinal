@@ -14,22 +14,22 @@ namespace PawsitiveCare
 
 using System;
     using System.Collections.Generic;
-    
-public partial class Image
+    using System.ComponentModel;
+    using System.Web;
+
+    public partial class Image
 {
 
-    public int ImageID { get; set; }
+        public int ImageID { get; set; }
+        public string ImageTitle { get; set; }
+        [DisplayName("Upload File")]
+        public string ImagePath { get; set; }
 
-    public string ImageTitle { get; set; }
+        public HttpPostedFileBase ImageFile { get; set; }
+        public int PetID { get; set; }
 
-    public string ImagePath { get; set; }
+        public virtual Pet Pet { get; set; }
 
-    public int PetID { get; set; }
-
-
-
-    public virtual Pet Pet { get; set; }
-
-}
+    }
 
 }
