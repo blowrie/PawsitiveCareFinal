@@ -4,7 +4,6 @@
     background-color: #5b383e;
     color: #e5e4dc;
 }
-
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -31,7 +30,19 @@ h2 {
 }
 
 p {
+    font: "Ubuntu";
     color: #e5e4dc;
+}
+
+a {
+    font: "Ubuntu";
+    color: #e5e4dc;
+}
+
+a:hover {
+    font: "Ubuntu";
+    color: red;
+    background-color:black;
 }
 
 /* Details Layout*/
@@ -57,3 +68,16 @@ p {
     border-bottom-color: black;
 }
 /*End of Details Layout*/
+
+#Google.btn.btn-default {
+    padding: 5px 5px 5px 5px !important;
+    background-image: url('../Images/google2.png');
+    background-size: cover;
+    border-radius: 30%;
+    min-height: 77px;
+    background-color: red;
+    color: black;
+    border: none;
+    box-shadow: none;
+}
+
