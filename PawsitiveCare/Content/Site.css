@@ -1,33 +1,15 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background-color: #5b383e;
-    color: #e5e4dc;
-}
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
-}
-
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
-h2 {
+﻿h2 {
     font: 'Quicksand';
     color: #f4e55f;
+}
+
+h1 {
+    font: 'Quicksand';
+    color: #f4e55f;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    align-self: flex-end;
 }
 
 p {
@@ -35,14 +17,8 @@ p {
     font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.jumbotron {
-    background-image: url('CatIndex.jpg');
-    background-size: cover;
-    height: 570px;
-    width: auto;
-    border: 10px solid #e5e4dc;
-}
-    /* Details Layout*/
+
+/* Details Pages Layout*/
     #Deets {
     width: 1200px;
 }
@@ -65,3 +41,70 @@ p {
     border-bottom-color: black;
 }
 /*End of Details Layout*/
+
+
+body {
+    background-image: url('catbg.jpg');
+}
+
+
+.overlay {
+    background: rgba(91, 56, 62, .4);
+    height: 120%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background-size:cover;
+}
+
+#homePanel {
+    z-index: 3;
+    background-color: rgba(91, 56, 62, .5);
+    height: 600px;
+    width: 97%;
+    margin-top: 50px;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    margin-bottom:50px;
+}
+
+/*Navbar Styling*/
+
+.container {
+    padding: 0px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    font-family: 'Lato';
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #7a5b3d;
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #c5d3d8;
+    }
+
+a {
+    color: aliceblue;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+.navbar-inverse {
+    background: none;
+    border: 0px;
+    width: auto;
+}
+
+button.navbar-toggle {
+    background-color: #0e0e0f;
+}
+
+
+
