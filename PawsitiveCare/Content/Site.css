@@ -107,4 +107,95 @@ button.navbar-toggle {
 }
 
 
+/*Login Page*/
 
+h2.Login{
+    padding-right:500px;
+    padding-left:500px;
+    padding-top:20px;
+}
+
+h4.Login {
+    padding-right: 500px;
+    padding-left: 500px;
+    padding-top: 20px;
+    color: black;
+    font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-group {
+    padding-right: 450px;
+    padding-left: 450px;
+    padding-top: 20px;
+    color: black;
+    font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div.checkbox {
+    padding-right: 300px;
+    padding-left: 300px;
+    padding-top: 20px;
+    color: black;
+    font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.LoginButton {
+    padding-right: 250px;
+    padding-left: 250px;
+    padding-top: 20px;    
+}
+
+.LoginButton input.btn.btn-default{
+    border-radius:30%;
+    color:snow;
+    background-color:black;
+    opacity:.9;
+    border:solid;
+    height:50px;
+    width:70px;
+}
+
+    .LoginButton input.btn.btn-default:hover {
+        border-radius: 30%;
+        color: red;
+        background-color: black;
+        opacity: .9;
+        border: solid;
+        height: 50px;
+        width: 70px;
+    }
+
+p.Options {
+    font-weight:bold;
+    padding-right: 400px;
+    padding-left: 500px;
+    padding-top: 20px;
+}
+
+p.Options a {  
+    color: black;
+    font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+    p.Options a:hover {        
+        color: red;
+        background-color: black;
+        font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+section#ExtraLogin h4 {
+    color:black;
+    font-weight: bold;
+    padding-left: 500px;
+    padding-top:20px;
+    
+}
+
+hr{
+    color:transparent!important;
+}
+
+button#Google.btn.btn-default{
+    color:red;
+    background-color:black;
+}
