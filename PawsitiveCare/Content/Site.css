@@ -32,4 +32,13 @@ h2 {
 
 p {
     color: #e5e4dc;
+    font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.jumbotron {
+    background-image: url('CatIndex.jpg');
+    background-size: cover;
+    height: 570px;
+    width: auto;
+    border: 10px solid white;
 }
