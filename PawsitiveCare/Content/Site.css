@@ -9,7 +9,17 @@ h1 {
     letter-spacing: 4px;
     text-transform: uppercase;
     text-align: center;
+    font-size: 40px;
+}
+
+h3 {
+    font: 'Quicksand';
+    color: #f4e55f;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
     align-self: flex-end;
+    font-size: 20px;
 }
 
 p {
@@ -71,6 +81,50 @@ body {
     margin-bottom:50px;
 }
 
+.col-md-4.home-page {
+    text-align: center;
+
+}
+
+.row.homeindex {
+    margin-top: 100px;
+
+}
+
+#bone, #upload, #heart {
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+#bone:hover, #upload:hover, #heart:hover {
+        color: #e53754;
+}
+
+#login {
+    font: 'Ubuntu';
+    margin-top: 50px;
+    float: right;
+    margin-right: 10px;
+    align-content: flex-end;
+    padding: 10px;
+    background: none;
+    border: 2px solid white;
+}
+
+#pulse {
+    z-index: 2;
+    color: white;
+    opacity: .5;
+    font-size: 100px;
+}
+
+#navbarpaw {
+    font-size: 50px;
+    color: #f4e55f;
+}
+
 /*Navbar Styling*/
 
 .container {
@@ -78,14 +132,14 @@ body {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    font-family: 'Lato';
+    font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-transform: uppercase;
     font-size: 15px;
     color: #7a5b3d;
 }
 
     .navbar-inverse .navbar-nav > li > a:hover {
-        color: #c5d3d8;
+        color: #e53754;
     }
 
 a {
@@ -93,6 +147,7 @@ a {
 }
 
     a:hover {
+        color: #f4e55f;
         text-decoration: none;
     }
 
