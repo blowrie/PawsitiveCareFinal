@@ -63,12 +63,14 @@ body {
     z-index: 3;
     background-color: rgba(91, 56, 62, .5);
     height: 600px;
-    width: 1200px;
+    width: 97%;
     margin-top: 50px;
     align-content: center;
     align-items: center;
     position: fixed;
     margin-bottom:50px;
+    margin-left: 0px;
+
 }
 
 /*Navbar Styling*/
