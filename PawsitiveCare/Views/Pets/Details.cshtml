@@ -38,6 +38,7 @@
             <h2>Documents</h2>
             @Html.ActionLink("View More", "Index", "Documents", new { id = Model.PetID }, new { })
             @Html.ActionLink("Add Document", "Create", "Documents", new { id = Model.PetID }, new { })
+            @Html.ActionLink("Upload", "Add", "Images", new { id = Model.PetID }, new { })
         </div>
         <div class="col-md-4" id="SmallDeets">
             <h2>Visits</h2>
