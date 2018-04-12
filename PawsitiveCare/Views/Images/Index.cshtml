@@ -10,48 +10,34 @@
     <div class="inner">
         <div class="panel panel-default" id="indexPanel">
             <div class="panel-body">
-                <h2>Index</h2>
+                <h2>Images</h2>
 
                 <p>
-                    @Html.ActionLink("Create New", "Create")
+                    <button type="button" class="btn btn-default">Add Image<a href="/Images/Create"> <i class="fas fa-plus-circle"></i></a></button>
                 </p>
-                <table class="table">
-                    <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ImageTitle)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ImagePath)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Pet.PetName)
-                        </th>
-                        <th></th>
-                    </tr>
+                @foreach (var item in Model)
+    {
 
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ImageTitle)
-                            </td>
-                            <td>
-                                @*<img src="https://localhost:44306/Image/Apple_Jacks__34438.1440623833.500.750185624027.png" />*@
-                                <img src="@Html.DisplayFor(modelItem => item.ImagePath)"/>
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Pet.PetName)
-                            </td>
-                            <td>
-                                @Html.ActionLink("Edit", "Edit", new { id = item.ImageID }) |
-                                @Html.ActionLink("Details", "Details", new { id = item.ImageID }) |
-                                @Html.ActionLink("Delete", "Delete", new { id = item.ImageID })
-                            </td>
-                        </tr>
-                    }
+            <div class="col-md-2">
+                <div class="thumbnail index">
 
-                </table>
+                    
+
+                    <img src="@Html.DisplayFor(modelItem => item.ImagePath)" class="indexPages"/>
+                    <div class="caption">
+                        <p class="imageDetails">
+                            @Html.DisplayFor(modelItem => item.Pet.PetName)<br />
+
+                            <a href="@Url.Action("Edit", "Images", new { id = item.ImageID })" class="fas fa-edit"></a>
+                            <a href="@Url.Action("Details", "Images", new { id = item.ImageID })" class="fas fa-info-circle"></a>
+                            <a href="@Url.Action("Delete", "Images", new { id = item.ImageID})" class="fas fa-trash-alt"></a>
+                        </p>
+                    </div>
                 </div>
+            </div>
+}
+
+            </div>
             </div>
         </div>
     </div>

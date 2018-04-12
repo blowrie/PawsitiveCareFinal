@@ -57,7 +57,7 @@ body {
 }
 
 
-.overlay {
+.overlay { /*This is the overlay color layer on the background image to make it purple*/
     background: rgba(91, 56, 62, .4);
     height: 120%;
     width: 100%;
@@ -68,7 +68,8 @@ body {
     background-size:cover;
 }
 
-#homePanel {
+
+#homePanel { /*Styles the Homepage panel in Home Index*/
     z-index: 3;
     background-color: rgba(91, 56, 62, .5);
     height: 600px;
@@ -80,7 +81,7 @@ body {
     margin-bottom:50px;
 }
 
-#indexPanel {
+#indexPanel { /*Styles the Index panels on all index pages*/
     z-index: 3;
     background-color: rgba(91, 56, 62, .5);
     height: 600px;
@@ -93,7 +94,7 @@ body {
     text-align: center;
 }
 
-.col-md-4.home-page {
+.col-md-4.home-page { /*This centers things on the homepage*/
     text-align: center;
 
 }
@@ -103,7 +104,7 @@ body {
 
 }
 
-#bone, #upload, #heart {
+#bone, #upload, #heart { /*These are the icons on the homepage*/
     font-size: 100px;
     color: white;
     text-align: center;
@@ -114,7 +115,7 @@ body {
         color: #e53754;
 }
 
-#login {
+#login { /*Styles the login and register buttons on the homepage*/
     font: 'Ubuntu';
     margin-top: 50px;
     float: right;
@@ -125,23 +126,12 @@ body {
     border: 2px solid white;
 }
 
-#pulse {
-    z-index: 2;
-    color: white;
-    opacity: .5;
-    font-size: 100px;
-}
-
-#navbarpaw {
-    font-size: 50px;
-    color: #e5e4dc;
-}
-
-/*Navbar Styling*/
 
 .container {
     padding: 0px;
 }
+
+/* Begin Navbar Styling*/
 
 .navbar-inverse .navbar-nav > li > a {
     font-family: 'Rochester', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -173,5 +163,65 @@ button.navbar-toggle {
     background-color: #0e0e0f;
 }
 
+#navbarpaw {
+    font-size: 50px;
+    color: #e5e4dc;
+}
+/*End of Navbar styling*/
+
+/*This styles the thumbnails and captions on the Index pages*/
+
+.thumbnail.index {
+    border: none;
+    background: none;
+    box-shadow: rgba(28, 27, 27, .3) 10px 10px 10px inset;
+}
+
+    .thumbnail.index:hover {
+        transform: scale(1.05)
+    }
+
+.indexPages {
+    /*border: 3px solid #eaeaea;*/
+    padding: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.caption {
+    width: auto;
+    background-color: #eaeaea;
+}
+
+.imageDetails {
+    font-size: 24px;
+    color: #e53754;
+    font-family: 'Rochester', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.fas.fa-edit, .fas.fa-info-circle, .fas.fa-trash-alt {
+    color: #e53754;
+    font-size: 12px;
+}
+
+    .fas.fa-edit:hover, .fas.fa-info-circle:hover, .fas.fa-trash-alt:hover {
+        color: #f9022b;
+    }
+
+.btn.btn-default {
+
+    background: none;
+    border: 1px solid white;
+    color: white;
+
+}
+
+.fas.fa-plus-circle {
+    margin-left: 5px;
+}
+
+    .fas.fa-plus-circle:active {
+        color: #f9022b;
+    }
 
 
