@@ -6,7 +6,6 @@
 h1 {
     font-family: 'Rochester', cursive;
     color: #f97087;
-    /*letter-spacing: 4px;*/
     text-align: center;
     font-size: 90px;
 }
@@ -219,6 +218,15 @@ button.navbar-toggle {
     .fas.fa-plus-circle:active {
         color: #f9022b;
     }
+
+th {
+    text-align: center;
+    color: #f97087;
+}
+
+td {
+    color: #e5e4dc;
+}
 
 
 /*Login Page*/
