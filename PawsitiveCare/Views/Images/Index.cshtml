@@ -13,15 +13,13 @@
                 <h2>Images</h2>
 
                 <p>
-                    <button type="button" class="btn btn-default">Add Image<a href="/Images/Create"> <i class="fas fa-plus-circle"></i></a></button>
+                    <button type="button" class="btn btn-default">Add Image<a href="/Images/Add"> <i class="fas fa-plus-circle"></i></a></button>
                 </p>
                 @foreach (var item in Model)
     {
 
             <div class="col-md-2">
-                <div class="thumbnail index">
-
-                    
+                <div class="thumbnail index">         
 
                     <img src="@Html.DisplayFor(modelItem => item.ImagePath)" class="indexPages"/>
                     <div class="caption">

@@ -389,11 +389,6 @@
     <Content Include="Views\Weights\Index.cshtml" />
     <Content Include="Views\Pets\UserPets.cshtml" />
     <Content Include="Views\Images\Add.cshtml" />
-    <Content Include="Views\Images1\Create.cshtml" />
-    <Content Include="Views\Images1\Delete.cshtml" />
-    <Content Include="Views\Images1\Details.cshtml" />
-    <Content Include="Views\Images1\Edit.cshtml" />
-    <Content Include="Views\Images1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

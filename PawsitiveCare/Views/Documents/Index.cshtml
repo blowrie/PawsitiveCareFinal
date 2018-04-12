@@ -4,42 +4,38 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="outer">
+    <div class="overlay"></div>
+    <div class="inner">
+        <div class="panel panel-default" id="indexPanel">
+            <div class="panel-body">
+                <h2>Documents</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DocumentTitle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DocumentImage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Pet.PetName)
-        </th>
-        <th></th>
-    </tr>
+                <p>
+                    <button type="button" class="btn btn-default">Add a Document<a href="/Documents/Create"> <i class="fas fa-plus-circle"></i></a></button>
+                </p>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DocumentTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DocumentImage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Pet.PetName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DocumentID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DocumentID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DocumentID })
-        </td>
-    </tr>
+                    @foreach (var item in Model)
+    {
+                <div class="col-md-2">
+                    <div class="thumbnail index">
+                        <img src=" @Html.DisplayFor(modelItem => item.DocumentImage)" class="indexPages" />
+                        <div class="caption">
+                            <p class="imageDetails">
+
+                                @Html.DisplayFor(modelItem => item.DocumentTitle)<br />
+
+                                <h5>@Html.DisplayFor(modelItem => item.Pet.PetName)</h5><br />
+
+                                <a href="@Url.Action("Edit", "Documents", new { id = item.DocumentID })" class="fas fa-edit"></a>
+                                <a href="@Url.Action("Details", "Documents", new { id = item.DocumentID })" class="fas fa-info-circle"></a>
+                                <a href="@Url.Action("Delete", "Documents", new { id = item.DocumentID})" class="fas fa-trash-alt"></a>
+</div>
+                    </div>
+                </div>
+
 }
-
-</table>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
