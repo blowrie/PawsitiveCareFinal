@@ -305,10 +305,6 @@ section#ExtraLogin h4 {
     padding-top: 2px;
 }
 
-hr {
-    color: transparent !important;
-}
-
 button#Google.btn.btn-default {
     border-radius: 30%;
     color: snow;
@@ -328,4 +324,41 @@ button#Google.btn.btn-default {
         height: 50px;
         width: 70px;
     }
+
+ /*Register Page*/
+
+h2.Register {
+    padding-right: 500px;
+    padding-left: 500px;
+    font-family: 'Rochester', cursive;
+    color: #f97087;
+    font-size: 100px;
 }
+
+h4.Create {
+    padding-right: 500px;
+    padding-left: 500px;
+    padding-top: 20px;
+    font: 'Quicksand';
+    color: #f4e55f;
+}
+
+input#Submit.btn.btn-default {
+    border-radius: 30%;
+    color: snow;
+    background-color: black;
+    opacity: .9;
+    border: solid;
+    height: 50px;
+    width: 90px;
+}
+
+    input#Submit.btn.btn-default:hover {
+        border-radius: 30%;
+        color: red;
+        background-color: black;
+        opacity: .9;
+        border: solid;
+        height: 50px;
+        width: 80px;
+    }
