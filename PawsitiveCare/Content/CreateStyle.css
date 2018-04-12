@@ -1,0 +1,15 @@
+﻿body {
+background-color: gray!important;
+
+}
+
+.thumbnail {
+    background-color: rgba(91, 56, 62, .5);
+    align-content: center;
+    position: fixed;
+}
+
+
+.container{
+    margin-top: 100px;
+}
