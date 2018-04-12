@@ -28,7 +28,7 @@ p {
 
 
 /* Details Pages Layout*/
-    #Deets {
+#Deets {
     width: 1200px;
 }
 
@@ -65,7 +65,7 @@ body {
     z-index: 2;
     left: 0;
     top: 0;
-    background-size:cover;
+    background-size: cover;
 }
 
 
@@ -78,7 +78,7 @@ body {
     align-content: center;
     align-items: center;
     position: fixed;
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
 
 #indexPanel { /*Styles the Index panels on all index pages*/
@@ -96,12 +96,10 @@ body {
 
 .col-md-4.home-page { /*This centers things on the homepage*/
     text-align: center;
-
 }
 
 .row.homeindex {
     margin-top: 100px;
-
 }
 
 #bone, #upload, #heart { /*These are the icons on the homepage*/
@@ -111,9 +109,9 @@ body {
     align-content: center;
 }
 
-#bone:hover, #upload:hover, #heart:hover {
+    #bone:hover, #upload:hover, #heart:hover {
         color: #e53754;
-}
+    }
 
 #login { /*Styles the login and register buttons on the homepage*/
     font: 'Ubuntu';
@@ -209,11 +207,9 @@ button.navbar-toggle {
     }
 
 .btn.btn-default {
-
     background: none;
     border: 1px solid white;
     color: white;
-
 }
 
 .fas.fa-plus-circle {
@@ -225,3 +221,111 @@ button.navbar-toggle {
     }
 
 
+/*Login Page*/
+
+h2.Login {
+    padding-right: 500px;
+    padding-left: 500px;
+    font-family: 'Rochester', cursive;
+    color: #f97087;
+    font-size: 100px;
+}
+
+h4.Login {
+    padding-right: 500px;
+    padding-left: 500px;
+    padding-top: 20px;
+    font: 'Quicksand';
+    color: #f4e55f;
+}
+
+.form-group {
+    padding-right: 400px;
+    padding-left: 400px;
+    padding-top: 20px;
+    font: 'Quicksand';
+    color: #f4e55f;
+}
+
+div.checkbox {
+    padding-left: 100px;
+    padding-top: 20px;
+    font: 'Quicksand';
+    color: #f4e55f;
+}
+
+.LoginButton {
+    padding-right: 250px;
+    padding-left: 250px;
+    padding-top: 20px;
+}
+
+    .LoginButton input.btn.btn-default {
+        border-radius: 30%;
+        color: snow;
+        background-color: black;
+        opacity: .9;
+        border: solid;
+        height: 50px;
+        width: 90px;
+    }
+
+        .LoginButton input.btn.btn-default:hover {
+            border-radius: 30%;
+            color: red;
+            background-color: black;
+            opacity: .9;
+            border: solid;
+            height: 50px;
+            width: 70px;
+        }
+
+p.Options {
+    font-weight: bold;
+    padding-right: 400px;
+    padding-left: 450px;
+    padding-top: 20px;
+}
+
+    p.Options a {
+        font: 'Quicksand';
+        color: #f4e55f;
+    }
+
+        p.Options a:hover {
+            color: red;
+            background-color: black;
+            font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+section#ExtraLogin h4 {
+    font: 'Quicksand';
+    color: #f4e55f;
+    padding-left: 50px;
+    padding-top: 2px;
+}
+
+hr {
+    color: transparent !important;
+}
+
+button#Google.btn.btn-default {
+    border-radius: 30%;
+    color: snow;
+    background-color: black;
+    opacity: .9;
+    border: solid;
+    height: 50px;
+    width: 90px;
+}
+
+    button#Google.btn.btn-default:hover {
+        border-radius: 30%;
+        color: red;
+        background-color: black;
+        opacity: .9;
+        border: solid;
+        height: 50px;
+        width: 70px;
+    }
+}
