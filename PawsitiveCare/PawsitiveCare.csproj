@@ -264,7 +264,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\CatIndex.jpg" />
     <Content Include="Content\CreateScript.js" />
     <Content Include="Content\CreateStyle.css" />
     <Content Include="favicon.ico" />
@@ -389,11 +388,6 @@
     <Content Include="Views\Weights\Index.cshtml" />
     <Content Include="Views\Pets\UserPets.cshtml" />
     <Content Include="Views\Images\Add.cshtml" />
-    <Content Include="Views\Images1\Create.cshtml" />
-    <Content Include="Views\Images1\Delete.cshtml" />
-    <Content Include="Views\Images1\Details.cshtml" />
-    <Content Include="Views\Images1\Edit.cshtml" />
-    <Content Include="Views\Images1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
