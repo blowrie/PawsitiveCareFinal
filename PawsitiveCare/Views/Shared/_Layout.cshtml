@@ -12,36 +12,88 @@
 
 
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <span class="icon-paw" id="navbarpaw"></span>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Pets", "Index", "Pets")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+<body onload="myFunction()" style="margin:0;">
+    @* Page loader *@
+    <div id="loader">
+        <div class="flying-area">
+            <div class="ufo">
+                <div class="rabbit-wrap">
+                    <div class="rabbit-head">
+                        <div class="rabbit-ear__left">
+                        </div>
+                        <div class="rabbit-ear__right">
+                        </div>
+                        <div class="rabbit-eye__left">
+                        </div>
+                        <div class="rabbit-eye__right">
+                        </div>
+                        <div class="rabbit-noose">
+                        </div>
+                    </div>
+                    <div class="rabbit-body">
+                        <div class="rabbit-hands">
+                            <div class="rabbit-hands__left">
+                            </div>
+                            <div class="rabbit-hands__right">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrot-wrap">
+                    <div class="carrot-body__top">
+                    </div>
+                    <div class="carrot-body__bottom">
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid body-content">
-        @RenderBody()
-        @*<hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>*@
+
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span class="icon-paw" id="navbarpaw"></span>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Pets", "Index", "Pets")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid body-content">
+            @RenderBody()
+            @*<hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                </footer>*@
+        </div>
+
+        <script>
+            var myVar;
+
+            function myFunction() {
+                myVar = setTimeout(showPage, 3000);
+            }
+
+            function showPage() {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("myDiv").style.display = "block";
+            }
+
+        </script>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 </body>
 </html>

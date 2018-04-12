@@ -10,50 +10,51 @@
         <div class="panel panel-default" id="indexPanel">
             <div class="panel-body">
 
-                <h2>Index</h2>
+                <h2>Vaccination Records</h2>
 
                 <p>
-                    @Html.ActionLink("Create New", "Create")
+                    <button type="button" class="btn btn-default">Add Record<a href="/Vaccinations/Create"> <i class="fas fa-plus-circle"></i></a></button>
                 </p>
                 <table class="table">
                     <tr>
                         <th>
-                            @Html.DisplayNameFor(model => model.VaccinationType)
+                            Pet Name
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.DateReceived)
+                            Vaccination Type
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.DueDate)
+                            Date Received
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.Pet.PetName)
+                            Due Date
                         </th>
                         <th></th>
                     </tr>
 
                     @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.VaccinationType)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.DateReceived)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.DueDate)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Pet.PetName)
-                            </td>
-                            <td>
-                                @Html.ActionLink("Edit", "Edit", new { id = item.VaccinationsID }) |
-                                @Html.ActionLink("Details", "Details", new { id = item.VaccinationsID }) |
-                                @Html.ActionLink("Delete", "Delete", new { id = item.VaccinationsID })
-                            </td>
-                        </tr>
-                    }
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pet.PetName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VaccinationType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateReceived)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DueDate)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.VaccinationsID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.VaccinationsID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.VaccinationsID })
+                </td>
+            </tr>
+}
 
                 </table>
             </div>

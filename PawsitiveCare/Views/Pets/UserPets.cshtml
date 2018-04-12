@@ -1,75 +1,42 @@
 ﻿@model IEnumerable<PawsitiveCare.Pet>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.PetName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BirthDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PetType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Breed)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PetPhoto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WeightDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Weight)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsFixed)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AspNetUser.Email)
-        </th>
-        <th></th>
-    </tr>
+<div class="outer">
+    <div class="overlay"></div>
+    <div class="inner">
+        <div class="panel panel-default" id="indexPanel">
+            <div class="panel-body">
+                <h2>Pets</h2>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PetName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BirthDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PetType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Breed)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PetPhoto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WeightDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Weight)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsFixed)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AspNetUser.Email)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PetID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PetID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PetID })
-        </td>
-    </tr>
-}
+                <p>
+                    <button type="button" class="btn btn-default">Add a Pet<a href="/Pets/Add"> <i class="fas fa-plus-circle"></i></a></button>
+                </p>
 
-</table>
+
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-2">
+                        <div class="thumbnail index">
+                            <img src=" @Html.DisplayFor(modelItem => item.PetPhoto)" class="indexPages" />
+                            <div class="caption">
+                                <h4>@Html.DisplayFor(modelItem => item.PetName)</h4>
+                                <p class="imageDetails">
+
+                                    @Html.DisplayFor(modelItem => item.PetType)<br />
+
+                                    @Html.DisplayFor(modelItem => item.Breed)<br />
+
+                                    @Html.DisplayFor(modelItem => item.AspNetUser.Email)
+
+                                    <a href="@Url.Action("Edit", "Pets", new { id = item.PetID })" class="fas fa-edit"></a>
+                                    <a href="@Url.Action("Details", "Pets", new { id = item.PetID })" class="fas fa-info-circle"></a>
+                                    <a href="@Url.Action("Delete", "Pets", new { id = item.PetID})" class="fas fa-trash-alt"></a>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
