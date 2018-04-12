@@ -20,6 +20,7 @@ public partial class Surgery
 
     public int SurgeryID { get; set; }
 
+
     public System.DateTime SurgeryDate { get; set; }
 
     public string SurgeryDescription { get; set; }
