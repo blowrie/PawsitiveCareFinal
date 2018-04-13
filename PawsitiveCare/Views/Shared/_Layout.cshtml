@@ -9,8 +9,6 @@
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
-
 </head>
 <body onload="myFunction()" style="margin:0;">
     @* Page loader *@
@@ -47,9 +45,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
     <div style="display:none;" id="myDiv" class="animate-bottom">
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -77,21 +73,16 @@
                     <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
                 </footer>*@
         </div>
-
         <script>
             var myVar;
-
             function myFunction() {
                 myVar = setTimeout(showPage, 3000);
             }
-
             function showPage() {
                 document.getElementById("loader").style.display = "none";
                 document.getElementById("myDiv").style.display = "block";
             }
-
         </script>
-
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)

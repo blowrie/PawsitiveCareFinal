@@ -28,8 +28,6 @@ namespace PawsitiveCare.Controllers
             return View(weights.ToList());
         }
 
-      
-
         // GET: Weights/Create
         public ActionResult Create()
         {
