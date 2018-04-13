@@ -3,7 +3,7 @@
 @*<table>*@
     @foreach (var item in Model)
     {
-        <a href="@Url.Action("Details", new { id=item.DocumentID })"><img src="@Html.DisplayFor(modelItem => item.DocumentImage)" id="documentThumbnail" /></a>
+        <a href="@Url.Action("Details", new { id=item.DocumentID })"><img src="@Html.DisplayFor(modelItem => item.DocumentImage)" id="documentThumbnail"  title="@Html.DisplayFor(modelItem => item.DocumentTitle)"/></a>
 
         @*@Html.ActionLink("Edit", "Edit", new { id=item.DocumentID }) |
             @Html.ActionLink("Details", "Details", new { id=item.DocumentID }) |

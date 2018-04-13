@@ -1,22 +1,17 @@
 ﻿@model IEnumerable<PawsitiveCare.Visit>
 
-<table>
+
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ClinicName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VisitCost)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VisitDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VisitDate)
-        </td>
-    </tr>
+<div class="well">
+
+    @Html.DisplayFor(modelItem => item.ClinicName)
+
+    @Html.DisplayFor(modelItem => item.VisitCost)
+
+    @Html.DisplayFor(modelItem => item.VisitDescription)
+
+    @Html.DisplayFor(modelItem => item.VisitDate)
+</div>
 }
 
-</table>

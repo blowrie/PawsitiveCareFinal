@@ -23,7 +23,8 @@ h3 {
 
 p {
     color: #e5e4dc;
-    font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Quicksand', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /*font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
 }
 
 body {
@@ -803,7 +804,7 @@ h4 {
 }
 
 #documentThumbnail {
-    width: 50px;
+    width: 80px;
     height: auto;
     border: 1px solid white;
 }
@@ -826,8 +827,10 @@ h4 {
 }
 
 .parshViews {
+    font-family: 'Quicksand', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
 }
+
 
 #detailsPetName {
     text-align: left;
@@ -837,28 +840,13 @@ h4 {
     font-size: 60px;
 }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
+.well {
+    background-color: rgba(91, 56, 62, 0);
+    border: 1px solid rgba(229, 228, 220, .3); 
+    color: #e5e4dc;
+    font-family: 'Quicksand', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: black;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 0;
-        /* Position the tooltip */
-        position: absolute;
-        z-index: 1;
-    }
-
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-    }
 
 /*Create Page*/
 
