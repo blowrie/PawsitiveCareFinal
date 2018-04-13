@@ -800,6 +800,7 @@ h4 {
     width: 300px;
     height: auto;
     border: 10px solid #e5e4dc;
+<<<<<<< HEAD
 
 /*Create Page*/
 
@@ -886,4 +887,41 @@ input#WeightDate.form-control.text-box.single-line {
 
 div.col-md-10 a {
     margin-left: 150px;
+=======
+}
+
+#documentThumbnail {
+    width: 50px;
+    height: auto;
+    border: 1px solid white;
+
+}
+
+    #documentThumbnail:hover {
+        transform: scale(1.05)
+    }
+.icon-archive2 {
+    font-size: 20px;
+}
+
+.icon-database-add {
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.detailsIcons {
+    float: right;
+}
+
+.parshViews {
+    text-align: center;
+}
+
+#detailsPetName {
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'Rochester', cursive;
+    color: #f97087;
+    font-size: 60px;
+>>>>>>> PartialViews
 }

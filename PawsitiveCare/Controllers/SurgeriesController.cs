@@ -27,6 +27,12 @@ namespace PawsitiveCare.Controllers
             return View(surgeries.ToList());
         }
 
+        public PartialViewResult SpecificPetSurgeries(int? id)
+        {
+            List<Surgery> model = db.Surgeries.Where(w => w.PetID == id.Value).OrderByDescending(x => x.SurgeryDate).Take(3).ToList();
+            return PartialView("SurgeryParsh", model);
+        }
+
         // GET: Surgeries/Details/5
         public ActionResult Details(int? id)
         {

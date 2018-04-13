@@ -1,0 +1,16 @@
+﻿@model IEnumerable<PawsitiveCare.Weight>
+
+<table class="parshViews">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight1) pounds
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeightDate)
+            </td>
+
+        </tr>
+    }
+</table>

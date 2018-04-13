@@ -1,0 +1,18 @@
+﻿@model IEnumerable<PawsitiveCare.Vaccination>
+
+<table>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VaccinationType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateReceived)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DueDate)
+        </td>
+    </tr>
+}
+</table>
