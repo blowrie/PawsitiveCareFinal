@@ -162,5 +162,14 @@ namespace PawsitiveCare.Controllers
             }
             base.Dispose(disposing);
         }
+
+        /*public PartialViewResult OnlyPetWeight()
+        {
+            
+            List<Pet> model = db.Weights.Where(x => x.WeightID)
+            //List<Pet> model = db.Pets.Where(x => x.UserID == petOwner).ToList();
+            return PartialView("Weights", model);
+        }
+        */
     }
 }
