@@ -800,51 +800,65 @@ h4 {
     width: 300px;
     height: auto;
     border: 10px solid #e5e4dc;
-<<<<<<< HEAD
-
-/*Create Page*/
-
-input#PetName.form-control.text-box.single-line {
-    background-color: transparent !important;
-    border-style: solid;
-    border-color: #f97087;
 }
 
-input#BirthDate.form-control.text-box.single-line{
-    background-color:transparent!important;
-    border-style:solid;
-    border-color:#f4e55f;
-    
+#documentThumbnail {
+    width: 50px;
+    height: auto;
+    border: 1px solid white;
 }
 
-input#PetType.form-control.text-box.single-line {
-    background-color: transparent !important;
-    border-style: solid;
-    border-color: #f97087;
+    #documentThumbnail:hover {
+        transform: scale(1.05)
+    }
+
+.icon-archive2 {
+    font-size: 20px;
 }
 
-input#Breed.form-control.text-box.single-line {
-    background-color: transparent !important;
-    border-style: solid;
-    border-color: #f4e55f;
-    width:465px!important;
+.icon-database-add {
+    padding-left: 15px;
+    font-size: 20px;
 }
 
-input#Weight.form-control.text-box.single-line {
-    background-color: transparent !important;
-    border-style: solid;
-    border-color: #f97087;
+.detailsIcons {
+    float: right;
 }
 
-input#WeightDate.form-control.text-box.single-line {
-    background-color: transparent !important;
-    border-style: solid;
-    border-color: #f4e55f;
+.parshViews {
+    text-align: center;
 }
 
-div.col-md-10 a{
-    margin-left:150px;
+#detailsPetName {
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'Rochester', cursive;
+    color: #f97087;
+    font-size: 60px;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
 
 /*Create Page*/
 
@@ -887,41 +901,4 @@ input#WeightDate.form-control.text-box.single-line {
 
 div.col-md-10 a {
     margin-left: 150px;
-=======
-}
-
-#documentThumbnail {
-    width: 50px;
-    height: auto;
-    border: 1px solid white;
-
-}
-
-    #documentThumbnail:hover {
-        transform: scale(1.05)
-    }
-.icon-archive2 {
-    font-size: 20px;
-}
-
-.icon-database-add {
-    padding-left: 15px;
-    font-size: 20px;
-}
-
-.detailsIcons {
-    float: right;
-}
-
-.parshViews {
-    text-align: center;
-}
-
-#detailsPetName {
-    text-align: left;
-    margin-bottom: 10px;
-    font-family: 'Rochester', cursive;
-    color: #f97087;
-    font-size: 60px;
->>>>>>> PartialViews
 }
