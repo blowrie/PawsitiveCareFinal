@@ -25,8 +25,6 @@ p {
     color: #e5e4dc;
     font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-
 /* Details Pages Layout*/
 #Deets {
     width: 1200px;
@@ -50,12 +48,9 @@ p {
     border-bottom-color: black;
 }
 /*End of Details Layout*/
-
-
 body {
     background-image: url('catbg.jpg');
 }
-
 
 .overlay { /*This is the overlay color layer on the background image to make it purple*/
     background: rgba(91, 56, 62, .4);
@@ -69,7 +64,6 @@ body {
     top: 0;
     background-size: cover;
 }
-
 
 #homePanel { /*Styles the Homepage panel in Home Index*/
     z-index: 3;
@@ -139,13 +133,10 @@ body {
     border: 2px solid white;
 }
 
-
 .container {
     padding: 0px;
 }
-
 /* Begin Navbar Styling*/
-
 .navbar-inverse .navbar-nav > li > a {
     font-family: 'Rochester', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
@@ -181,9 +172,7 @@ button.navbar-toggle {
     color: #e5e4dc;
 }
 /*End of Navbar styling*/
-
 /*This styles the thumbnails and captions on the Index pages*/
-
 .thumbnail.index {
     border: none;
     background: none;
@@ -243,9 +232,7 @@ th {
 td {
     color: #e5e4dc;
 }
-
 /*Login Page*/
-
 h2.Login {
     padding-right: 500px;
     padding-left: 500px;
@@ -294,7 +281,7 @@ div.checkbox {
 
         .LoginButton input.btn.btn-default:hover {
             border-radius: 30%;
-            color:#f97087;
+            color: #f97087;
             opacity: .9;
             border: solid;
             height: 50px;
@@ -314,7 +301,7 @@ p.Options {
     }
 
         p.Options a:hover {
-            color:#f97087;
+            color: #f97087;
             font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
@@ -342,9 +329,7 @@ button#Google.btn.btn-default {
         height: 50px;
         width: 80px;
     }
-
- /*Register Page*/
-
+/*Register Page*/
 h2.Register {
     padding-right: 500px;
     padding-left: 500px;
@@ -387,7 +372,6 @@ h4 {
     text-align: center;
     font-size: 15px;
 }
-
 /*loader*/
 #loader {
     align-content: center;
@@ -610,6 +594,7 @@ h4 {
     left: 8px;
     box-shadow: 0 -4px 2px rgba(0, 0, 0, 0.2) inset;
 }
+
     .rabbit-hands__left:before {
         content: '';
         display: block;
@@ -662,6 +647,7 @@ h4 {
     background-color: orange;
     box-shadow: 0 0px 1px rgba(0,0,0,0.3) inset
 }
+
     .carrot-body__top:before {
         content: '';
         display: block;
@@ -792,9 +778,6 @@ h4 {
         transform: rotate(360deg) translateX(100px) rotate(-360deg);
     }
 }
-
-
-
 /* Add animation to "page content" */
 .animate-bottom {
     position: relative;
@@ -832,4 +815,3 @@ h4 {
     display: none;
     text-align: center;
 }
-
