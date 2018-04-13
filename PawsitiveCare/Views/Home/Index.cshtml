@@ -27,10 +27,17 @@
                         <p>Keep track of each pet's vet visits, surgeries, vaccination records, and weight. Get alerts when your pet is due for vaccinations. </p>
                     </div>
                 </div>
+                @if (Request.IsAuthenticated)
+                {
+                    <p></p>
+                }
+                else
+                {
                 <div class="col-md-12">
                     <button id="login"><a href="~/Account/Register">Register</a></button>
                     <button id="login"><a href="~/Account/Login">Login</a></button>
                 </div>
+                }
             </div>
         </div>
     </div>
