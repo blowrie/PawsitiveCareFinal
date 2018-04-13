@@ -4,191 +4,76 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="outer">
+    <div class="overlay">
+        <div class="inner">
+            <div class="panel panel-default" id="homePanel">
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <h2>@Html.DisplayFor(model => model.PetName)</h2>
+                        </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src=" @Html.DisplayFor(model => model.PetPhoto)" class="petDetailsPhoto"><br /><br /><br />
+                            <p>@Html.DisplayFor(model => model.BirthDate)</p>
+                            <p>@Html.DisplayFor(model => model.PetType)</p>
+                            <p>Fixed? @Html.DisplayFor(model => model.IsFixed)</p>
+                            <p>
+                                @Html.ActionLink("Edit", "Edit", new { id = Model.PetID }) |
+                                @Html.ActionLink("Back to List", "Index")
+                            </p>
+                        </div>
+                        <div class="col-md-7">
+                            <h3>Weights</h3>
+                            @Html.ActionLink("View More", "Index", "Weights", new { id = Model.PetID }, new { })
+                            @Html.ActionLink("Add Weight", "Create", "Weights", new { id = Model.PetID }, new { })
+                            <hr />
+                            <h3>Surgeries</h3>
+                            @Html.ActionLink("View More", "Index", "Surgeries", new { id = Model.PetID }, new { })
+                            @Html.ActionLink("Add Surgery", "Create", "Surgeries", new { id = Model.PetID }, new { })
+                            <hr />
+                            <h3>Documents</h3>
+                            @Html.ActionLink("View More", "Index", "Documents", new { id = Model.PetID }, new { })
+                            @Html.ActionLink("Add Document", "Create", "Documents", new { id = Model.PetID }, new { })
+                            <hr />
+                            <h3>Visits</h3>
+                            @Html.ActionLink("View More", "Index", "Visits", new { id = Model.PetID }, new { })
+                            @Html.ActionLink("Add Visit", "Create", "Visits", new { id = Model.PetID }, new { })
+                        </div>
 
-<div class="container" id="Deets">
-    <div class="row" id="RowDeets">
-        <div class="col-md-8" id="LargeDeets">
-            <h1>@Html.DisplayFor(model => model.PetName)</h1>
-            <p>@Html.DisplayFor(model => model.BirthDate)</p>
-            <p>@Html.DisplayFor(model => model.PetType)</p>
-            <p>@Html.DisplayFor(model => model.IsFixed)</p>
-            <p>Image</p>
-        </div>
-        <div class="col-md-4" id="SmallDeets">
-            <h2>Weight</h2>
-            @Html.ActionLink("View More", "Index", "Weights", new { id = Model.PetID }, new { })
-            @Html.ActionLink("Add Weight", "Create", "Weights", new { id = Model.PetID }, new { })
-        </div>
-    </div>
-    <div class="row" id="RowDeets">
-        <div class="col-md-4" id="SmallDeets">
-            <h2>Surgeries</h2>
-            @Html.ActionLink("View More", "Index", "Surgeries", new { id = Model.PetID }, new { })
-            @Html.ActionLink("Add Surgery", "Create", "Surgeries", new { id = Model.PetID }, new { })
-        </div>
-    </div>
-    <div class="row" id="RowDeets">
-        <div class="col-md-4" id="SmallDeets">
-            <h2>Vaccinations</h2>
-            @Html.ActionLink("View More", "Index", "Vaccinations", new { id = Model.PetID }, new { })
-            @Html.ActionLink("Add Vaccination", "Create", "Vaccinations", new { id = Model.PetID }, new { })
-        </div>
-        <div class="col-md-4" id="SmallDeets">
-            <h2>Documents</h2>
-            @Html.ActionLink("View More", "Index", "Documents", new { id = Model.PetID }, new { })
-            @Html.ActionLink("Add Document", "Create", "Documents", new { id = Model.PetID }, new { })
-        </div>
-        <div class="col-md-4" id="SmallDeets">
-            <h2>Visits</h2>
-            @Html.ActionLink("View More", "Index", "Visits", new { id = Model.PetID }, new { })
-            @Html.ActionLink("Add Visit", "Create", "Visits", new { id = Model.PetID }, new { })
-        </div>
-    </div>
+                </div>
+                    </div>
+                </div>
 </div>
+        </div>  
 
-@*<div id="Orig">
-    <h4>Pet</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.PetName)
-        </dt>
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.PetName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BirthDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BirthDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PetType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PetType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Breed)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Breed)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PetPhoto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PetPhoto)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.WeightDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.WeightDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Weight)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Weight)
-            @Html.ActionLink("View More", "Index", "Weights", new { id = Model.PetID }, new { })
-            @Html.ActionLink("Add Weight", "Create", "Weights", new { id = Model.PetID}, new { })
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.IsFixed)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.IsFixed)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UserID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UserID)
-        </dd>
-
-        <dt>
-            Surgeries
-        </dt>
-        <dd>
-            @Html.ActionLink("View More", "Index", "Surgeries", new { id = Model.PetID }, new { })
-            @Html.ActionLink("Add Surgery", "Create", "Surgeries", new { id = Model.PetID }, new { })
-        </dd>
-
-        <dt>
-            Vaccinations
-        </dt>
-        <dd>
-            @Html.ActionLink("View More", "Index", "Vaccinations", new { id = Model.PetID }, new { })
-            @Html.ActionLink("Add Vaccination", "Create", "Vaccinations", new { id = Model.PetID }, new { })
-        </dd>
-
-        <dt>
-            Pet Documents
-        </dt>
-        <dd>
-            @Html.ActionLink("View More", "Index", "Documents", new { id = Model.PetID }, new { })
-            @Html.ActionLink("Add Document", "Create", "Documents", new { id = Model.PetID }, new { })
-        </dd>
-
-        <dt>
-            Vet Visits
-        </dt>
-        <dd>
-            @Html.ActionLink("View More", "Index", "Visits", new { id = Model.PetID }, new { })
-            @Html.ActionLink("Add Visit", "Create", "Visits", new { id = Model.PetID }, new { })
-        </dd>
-
-    </dl>
-</div>*@
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PetID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
-
-@*<div style="display:none" id="Swap">
-    <div class="row">
-        <div class="col-md-6" id="Wdate">
-            @{ Html.RenderPartial("Weight"); }
-        </div>
-        </div>
- </div> 
+                    @*<div style="display:none" id="Swap">
+                            <div class="row">
+                                <div class="col-md-6" id="Wdate">
+                                    @{ Html.RenderPartial("Weight"); }
+                                </div>
+                                </div>
+                         </div>
 
 
-<div hidden id="Add">
-   
-</div>
+                        <div hidden id="Add">
+
+                        </div>
 
 
 
-<script>
-    $.ajax({
-        type: 'POST',
-        url: "@Url.Action("FindWeight")",
-        contentType: "application/json; charset=utf-8",
-        success: function (data) {
-            WeightPlug = data.d.responseText;
-        },
-        error: function () {
-        }
-    });
+                        <script>
+                            $.ajax({
+                                type: 'POST',
+                                url: "@Url.Action("FindWeight")",
+                                contentType: "application/json; charset=utf-8",
+                                success: function (data) {
+                                    WeightPlug = data.d.responseText;
+                                },
+                                error: function () {
+                                }
+                            });
 
-</script>*@
+                        </script>*@

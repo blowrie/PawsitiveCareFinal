@@ -28,27 +28,24 @@ p {
 
 
 /* Details Pages Layout*/
-#Deets {
-    width: 1200px;
-}
 
-#RowDeets {
-    height: 400px;
+/*#RowDeets {
+    height: 200px;
 }
 
 #LargeDeets {
-    height: 800px;
-    width: 800px;
-    border: dashed;
-    border-bottom-color: black;
-}
-
-#SmallDeets {
     height: 400px;
     width: 400px;
     border: dashed;
     border-bottom-color: black;
 }
+
+#SmallDeets {
+    height: 200px;
+    width: 200px;
+    border: dashed;
+    border-bottom-color: black;
+}*/
 /*End of Details Layout*/
 
 
@@ -71,7 +68,7 @@ body {
 }
 
 
-#homePanel { /*Styles the Homepage panel in Home Index*/
+#homePanel { /*Styles the Create pages panels*/
     z-index: 3;
     background-color: rgba(91, 56, 62, .5);
     height: 600px;
@@ -831,5 +828,13 @@ h4 {
 #myDiv { /*This gem centers everything*/
     display: none;
     text-align: center;
+}
+
+/*Details Pages*/
+
+.petDetailsPhoto {
+    width: 300px;
+    height: auto;
+    border: 10px solid #e5e4dc;
 }
 
