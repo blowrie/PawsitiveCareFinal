@@ -28,6 +28,12 @@ namespace PawsitiveCare.Controllers
             return View(weights.ToList());
         }
 
+        public PartialViewResult SpecificPetWeights( int? id)
+        {
+            List < Weight > model = db.Weights.Where(w => w.PetID == id.Value).OrderByDescending(x => x.WeightDate).Take(3).ToList();
+            return PartialView("WeightParsh", model);
+        }
+
         // GET: Weights/Create
         public ActionResult Create()
         {

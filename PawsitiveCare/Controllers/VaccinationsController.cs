@@ -28,6 +28,12 @@ namespace PawsitiveCare.Controllers
             return View(vaccinations.ToList());
         }
 
+        public PartialViewResult SpecificPetVaccinations(int? id)
+        {
+            List<Vaccination> model = db.Vaccinations.Where(w => w.PetID == id.Value).OrderByDescending(x => x.DateReceived).Take(3).ToList();
+            return PartialView("VaccinationsParsh", model);
+        }
+
         // GET: Vaccinations/Details/5
         public ActionResult Details(int? id)
         {
