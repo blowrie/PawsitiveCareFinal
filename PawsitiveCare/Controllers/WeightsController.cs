@@ -24,7 +24,7 @@ namespace PawsitiveCare.Controllers
                 weights = weights.Where(w => w.PetID == id.Value);
 
             }
-           
+
             return View(weights.ToList());
         }
 
