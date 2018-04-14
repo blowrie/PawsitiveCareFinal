@@ -1,12 +1,39 @@
 ﻿@model IEnumerable<PawsitiveCare.Vaccination>
 
 
-@foreach (var item in Model) {
-    <div class="well">
+    @foreach (var item in Model)
+    {
+        <div class="well">
             @Html.DisplayFor(modelItem => item.VaccinationType):<br />
             Date Received: @Html.DisplayFor(modelItem => item.DateReceived)
-        <br />
-            Due: @Html.DisplayFor(modelItem => item.DueDate)
-    </div>
-}
+            <br />
+            Due: <p class="DueDate">@Html.DisplayFor(modelItem => item.DueDate)</p>
+        </div>
+    }
+
+
+<script>
+
+    var dateArray = [];
+    var Today = new Date();
+
+    function checkDate() {
+
+        var coll = document.getElementsByClassName('DueDate');
+        for (var i = 0; i < coll.length; i++) dateArray.push(coll[i].innerText);
+
+        var arrayLength = dateArray.length;
+
+        for (var i = 0; i < arrayLength; i++) {
+            var date = new Date(dateArray[i]);
+
+            if (date < Today) {
+                coll[i].style.color = "red";
+            }
+            else {
+            }
+        }
+    }
+
+</script>
 
