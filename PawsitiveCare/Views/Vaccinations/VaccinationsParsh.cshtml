@@ -3,9 +3,10 @@
 
 @foreach (var item in Model) {
     <div class="well">
-        @Html.DisplayFor(modelItem => item.VaccinationType)
-        @Html.DisplayFor(modelItem => item.DateReceived)
-        @Html.DisplayFor(modelItem => item.DueDate)
+            @Html.DisplayFor(modelItem => item.VaccinationType):<br />
+            Date Received: @Html.DisplayFor(modelItem => item.DateReceived)
+        <br />
+            Due: @Html.DisplayFor(modelItem => item.DueDate)
     </div>
 }
 

@@ -14,8 +14,9 @@ namespace PawsitiveCare
 
 using System;
     using System.Collections.Generic;
-    
-public partial class Pet
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class Pet
 {
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -41,7 +42,8 @@ public partial class Pet
 
     public string PetName { get; set; }
 
-    public Nullable<System.DateTime> BirthDate { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
+        public Nullable<System.DateTime> BirthDate { get; set; }
 
     public string PetType { get; set; }
 

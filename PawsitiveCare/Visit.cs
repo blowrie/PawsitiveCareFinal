@@ -14,8 +14,9 @@ namespace PawsitiveCare
 
 using System;
     using System.Collections.Generic;
-    
-public partial class Visit
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class Visit
 {
 
     public int VisitsID { get; set; }
@@ -26,7 +27,8 @@ public partial class Visit
 
     public string VisitDescription { get; set; }
 
-    public System.DateTime VisitDate { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
+        public System.DateTime VisitDate { get; set; }
 
     public int PetID { get; set; }
 

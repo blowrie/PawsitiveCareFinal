@@ -14,17 +14,20 @@ namespace PawsitiveCare
 
 using System;
     using System.Collections.Generic;
-    
-public partial class Vaccination
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class Vaccination
 {
 
     public int VaccinationsID { get; set; }
 
     public string VaccinationType { get; set; }
 
-    public System.DateTime DateReceived { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
+        public System.DateTime DateReceived { get; set; }
 
-    public Nullable<System.DateTime> DueDate { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
+        public Nullable<System.DateTime> DueDate { get; set; }
 
     public int PetID { get; set; }
 
