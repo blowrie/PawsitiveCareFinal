@@ -28,6 +28,7 @@ p {
 
 body {
     background-image: url('catbg.jpg');
+  
 }
 
 .overlay { /*This is the overlay color layer on the background image to make it purple*/
@@ -79,6 +80,17 @@ body {
     position: fixed;
     margin-bottom: 50px;
     text-align: center;
+}
+
+#thumbthumb{ /*Styles the Index panels on all index pages*/
+    z-index: 3;
+    background-color: rgba(91, 56, 62, .5);
+    margin-top: 50px;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    text-align: center;
+    width: inherit ;
 }
 
 .col-md-4.home-page { /*This centers things on the homepage*/
@@ -794,6 +806,10 @@ h4 {
     text-align: center;
 }
 
+#myDivtwo { /*This gem centers everything without display*/
+    text-align: center;
+}
+
 <<<<<<< HEAD
 /*Details Pages*/
 
@@ -888,3 +904,4 @@ input#WeightDate.form-control.text-box.single-line {
 div.col-md-10 a {
     margin-left: 150px;
 }
+
