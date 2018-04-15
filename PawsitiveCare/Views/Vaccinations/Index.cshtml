@@ -44,7 +44,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.DateReceived)
                 </td>
-                <td>
+                <td class="DueDate">
                     @Html.DisplayFor(modelItem => item.DueDate)
                 </td>
 
@@ -63,5 +63,26 @@
 </div>
 
 <script>
+
+    var dateArray = [];
+    var Today = new Date();
+
+    function checkDate() {
+
+        var coll = document.getElementsByClassName('DueDate');
+        for (var i = 0; i < coll.length; i++) dateArray.push(coll[i].innerText);
+
+        var arrayLength = dateArray.length;
+
+        for (var i = 0; i < arrayLength; i++) {
+            var date = new Date(dateArray[i]);
+
+            if (date < Today) {
+                coll[i].style.color = "red";
+            }
+            else {
+            }
+        }
+    }
 
 </script>
