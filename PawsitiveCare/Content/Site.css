@@ -55,6 +55,8 @@ body {
     position: fixed;
     margin-bottom: 50px;
     overflow: scroll;
+    text-align: center;
+    /*margin-left: 20px;*/
 }
 
 #frontpagePanel { /*Styles the Homepage panel in Home Index*/
@@ -80,6 +82,21 @@ body {
     position: fixed;
     margin-bottom: 50px;
     text-align: center;
+}
+
+#detailsPanel { /*Styles pet details panel*/
+    z-index: 3;
+    background-color: rgba(91, 56, 62, .5);
+    height: 600px;
+    width: 97%;
+    margin-top: 50px;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    margin-bottom: 50px;
+    overflow: scroll;
+    text-align: center;
+    margin-left: 20px;
 }
 
 .col-md-4.home-page { /*This centers things on the homepage*/
@@ -909,4 +926,22 @@ input#WeightDate.form-control.text-box.single-line {
 
 div.col-md-10 a {
     margin-left: 150px;
+}
+
+.icon-plus-square {
+    font-size: 20px;
+
+}
+
+.icon-plus-square:hover {
+        color:#f4e55f; 
+    }
+
+input#ImageTitle.form-control.text-box.single-line {
+    background: none !important;
+
+}
+
+input#ImageTitle.form-control.text-box.single-line:focus {
+    border: 1px solid white;
 }
