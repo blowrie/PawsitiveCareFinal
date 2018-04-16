@@ -33,14 +33,52 @@ namespace PawsitiveCare.Controllers
         // GET: Weights/Create
         public ActionResult Create()
         {
+
+            var name = User.Identity.Name;
+
+            var filtered =
+                from Pets in db.Pets
+                where
+                  Pets.UserID == User.Identity.Name
+                select new
+                {
+                    PetID = Pets.PetID,
+                    PetName = Pets.PetName,
+                    BirthDate = Pets.BirthDate,
+                    PetType = Pets.PetType,
+                    Breed = Pets.Breed,
+                    PetPhoto = Pets.PetPhoto,
+                    WeightDate = Pets.WeightDate,
+                    Weight = Pets.Weight,
+                    IsFixed = Pets.IsFixed,
+                    UserID = Pets.UserID
+                };
+
             ViewBag.PetID = new SelectList(db.Pets, "PetID", "PetName");
             return View();
+        }
+
+        // GET: Weights/Create
+        public ActionResult Create(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Weight weight = db.Weights.Where(c => c.PetID == id).OrderByDescending(x => x.WeightDate).FirstOrDefault();
+            if (weight == null)
+            {
+                return HttpNotFound();
+            }
+            weight.WeightDate = DateTime.Now;
+
+            return View(weight);
         }
 
         // POST: Weights/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        /*[HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "WeightID,Weight1,PetID,WeightDate")] Weight weight)
         {
@@ -51,9 +89,19 @@ namespace PawsitiveCare.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.PetID = new SelectList(db.Pets, "PetID", "PetName", weight.PetID);
+            var name = User.Identity.Name;
+
+            var filtered =
+                from p in db.Pets
+                where p.UserID == User.Identity.Name
+                select new
+                {
+                    p.PetID
+                };
+            ViewBag.filtered = new SelectList(filtered, "PetID", "PetName", weight.PetID);
             return View(weight);
         }
+        */
 
         // GET: Weights/Edit/5
         public ActionResult Edit(int? id)
