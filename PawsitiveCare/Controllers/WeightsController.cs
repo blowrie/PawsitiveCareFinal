@@ -34,11 +34,22 @@ namespace PawsitiveCare.Controllers
             return PartialView("WeightParsh", model);
         }
 
+
         // GET: Weights/Create
-        public ActionResult Create()
+        public ActionResult Create(int? id)
         {
-            ViewBag.PetID = new SelectList(db.Pets, "PetID", "PetName");
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Weight weight = db.Weights.Where(c => c.PetID == id).OrderByDescending(x => x.WeightDate).FirstOrDefault();
+            //if (weight == null)
+            //{
+            //    return HttpNotFound();
+            //}
+            weight.WeightDate = DateTime.Now;
+
+            return View(weight);
         }
 
         // POST: Weights/Create

@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<PawsitiveCare.Weight>
-
+@using Microsoft.AspNet.Identity;
 @{
     ViewBag.Title = "Index";
 }
@@ -13,6 +13,7 @@
 
                 <p>
                     <button type="button" class="btn btn-default">Add Pet Weight<a href="/Weights/Create"> <i class="fas fa-plus-circle"></i></a></button>
+                    <a href="/Pets/Index"><span class="icon-archive2" title="Back to your pets"></span></a>
                 </p>
                 <table class="table">
                     <tr>
@@ -30,6 +31,7 @@
 
                     @foreach (var item in Model)
                     {
+                        if(item.Pet.UserID == HttpContext.Current.User.Identity.Name){ 
                         <tr>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Weight1)
@@ -46,7 +48,8 @@
                                 @Html.ActionLink("Delete", "Delete", new { id = item.WeightID })
                             </td>
                         </tr>
-    }
+                        }
+                    }
 
 </table>
 </div>
