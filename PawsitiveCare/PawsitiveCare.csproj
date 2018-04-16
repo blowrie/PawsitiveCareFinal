@@ -266,6 +266,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CreateScript.js" />
     <Content Include="Content\CreateStyle.css" />
+    <Content Include="Content\Images2\btn_google_signin_light_normal_web.png" />
+    <Content Include="Content\Images2\g-logo.png" />
+    <Content Include="Content\Images2\imageedit__3592102400.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

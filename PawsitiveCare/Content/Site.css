@@ -80,6 +80,21 @@ body {
     position: fixed;
     margin-bottom: 50px;
     text-align: center;
+    overflow: scroll;
+}
+
+#loginPanel { /*Styles the panels on the login page*/
+    z-index: 3;
+    background-color: rgba(91, 56, 62, .5);
+    height: 600px;
+    width: 97%;
+    margin-top: 50px;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    margin-bottom: 50px;
+    text-align: center;
+    overflow: scroll;
 }
 
 .col-md-4.home-page { /*This centers things on the homepage*/
@@ -212,6 +227,9 @@ td {
     color: #e5e4dc;
 }
 /*Login Page*/
+label{
+    font-weight:normal;
+}
 h2.Login {
     padding-right: 500px;
     padding-left: 500px;
@@ -232,43 +250,43 @@ h4.Login {
     padding-right: 400px;
     padding-left: 400px;
     padding-top: 20px;
-    font: 'Quicksand';
+    font: 'Quicksand'!important;
     color: #f4e55f;
 }
 
 div.checkbox {
-    padding-left: 100px;
-    padding-top: 20px;
+
     font: 'Quicksand';
     color: #f4e55f;
+    align-content:center;
+    text-align:center;
 }
 
 .LoginButton {
-    padding-right: 250px;
-    padding-left: 250px;
-    padding-top: 20px;
+    font: 'Quicksand';
+    /*margin-right: 300px;*/
+    /*padding-left: 250px;*/
+    text-align:center;
+    align-content:center;
 }
 
     .LoginButton input.btn.btn-default {
-        border-radius: 30%;
-        color: #f4e55f;
-        opacity: .9;
-        border: solid;
-        height: 50px;
-        width: 90px;
+       align-content:center;
+       text-align: center;
+        color: #e5e4dc;
+        border: 1px solid;
+        /*height: 30px;
+        width: 70px;*/
+        padding: 15px 15px 15px 15px !important;
+        
+
     }
 
-        .LoginButton input.btn.btn-default:hover {
-            border-radius: 30%;
-            color: #f97087;
-            opacity: .9;
-            border: solid;
-            height: 50px;
-            width: 70px;
+        .LoginButton input.btn.btn-default:hover {     
+            color: #f4e55f;
         }
 
 p.Options {
-    font-weight: bold;
     padding-right: 400px;
     padding-left: 450px;
     padding-top: 20px;
@@ -279,10 +297,10 @@ p.Options {
         color: #f4e55f;
     }
 
-        p.Options a:hover {
+        /*p.Options a:hover {
             color: #f97087;
             font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
+        }*/
 
 section#ExtraLogin h4 {
     font: 'Quicksand';
@@ -291,18 +309,22 @@ section#ExtraLogin h4 {
     padding-top: 2px;
 }
 
-button#Google.btn.btn-default {
-    border-radius: 30%;
-    color: #f4e55f;
-    opacity: .9;
-    border: solid;
-    height: 50px;
-    width: 90px;
+button#Google.btn.btn-primary {
+    background-image: url('Images2/imageedit__3592102400.png');
+    background-size: cover;
+    /*border-radius: 50%;*/
+    border: none;
+    box-shadow: none;
+    background-color: none;
+    min-height: 77px;
+    background-color: transparent;
+    height: 80px;
+    width: 80px;
+    color: transparent;
+    padding: 5px 5px 5px 5px !important;
 }
 
     button#Google.btn.btn-default:hover {
-        border-radius: 30%;
-        color: #f97087;
         opacity: .9;
         border: solid;
         height: 50px;
@@ -910,3 +932,4 @@ input#WeightDate.form-control.text-box.single-line {
 div.col-md-10 a {
     margin-left: 150px;
 }
+
