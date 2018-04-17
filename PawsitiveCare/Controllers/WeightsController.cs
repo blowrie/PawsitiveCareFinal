@@ -57,13 +57,14 @@ namespace PawsitiveCare.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "WeightID,Weight1,PetID,WeightDate")] Weight weight)
+        public ActionResult Create([Bind(Include = "WeightID,Weight1,PetID,WeightDate")] Weight weight,int? id)
         {
             if (ModelState.IsValid)
             {
                 db.Weights.Add(weight);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Pets", new { id = weight.PetID });
+
             }
 
             ViewBag.PetID = new SelectList(db.Pets, "PetID", "PetName", weight.PetID);
