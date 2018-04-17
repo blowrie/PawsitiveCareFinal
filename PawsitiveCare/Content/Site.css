@@ -327,8 +327,6 @@ div.checkbox {
         }
 
 p.Options {
-    /*padding-right: 400px;
-    padding-left: 450px;*/
     padding-top: 20px;
 }
 
@@ -337,17 +335,6 @@ p.Options {
         color: #f4e55f;
     }
 
-        /*p.Options a:hover {
-            color: #f97087;
-            font-family: 'Ubuntu', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }*/
-
-/*section#ExtraLogin h4 {
-    font: 'Quicksand';
-    color: #f4e55f;
-    padding-left: 50px;
-    padding-top: 2px;
-}*/
 
 button#Google.btn.btn-primary {
     align-content: center;
@@ -937,7 +924,6 @@ input#PetName.form-control.text-box.single-line {
     border-style: solid;
     border-color: #f4e55f;
     color: #e5e4dc;
-    width: 100px;
 }
 
 input#BirthDate.form-control.text-box.single-line {
@@ -1003,6 +989,14 @@ input#ImageTitle.form-control.text-box.single-line:focus {
 
     text-align: center;
     align-content: center;
-    margin-left: 200px;
+    text-align: center;
+    margin-left: 300px;
+}
+
+.form-group {
+
+    width: 700px;
+    text-align: center;
+    align-content: center;
 }
 
