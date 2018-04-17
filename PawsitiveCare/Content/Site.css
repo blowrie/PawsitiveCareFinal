@@ -943,38 +943,44 @@ h4 {
 input#PetName.form-control.text-box.single-line {
     background-color: transparent !important;
     border-style: solid;
-    border-color: #f97087;
+    border-color: #f4e55f;
+    color: #e5e4dc;
 }
 
 input#BirthDate.form-control.text-box.single-line {
     background-color: transparent !important;
     border-style: solid;
     border-color: #f4e55f;
+    color: #e5e4dc;
 }
 
 input#PetType.form-control.text-box.single-line {
     background-color: transparent !important;
     border-style: solid;
-    border-color: #f97087;
+    border-color: #f4e55f;
+    color: #e5e4dc;
 }
 
 input#Breed.form-control.text-box.single-line {
     background-color: transparent !important;
     border-style: solid;
     border-color: #f4e55f;
+    color: #e5e4dc;
     width: 465px !important;
 }
 
 input#Weight.form-control.text-box.single-line {
     background-color: transparent !important;
     border-style: solid;
-    border-color: #f97087;
+    border-color: #f4e55f;
+    color: #e5e4dc;
 }
 
 input#WeightDate.form-control.text-box.single-line {
     background-color: transparent !important;
     border-style: solid;
     border-color: #f4e55f;
+    color: #e5e4dc;
 }
 
 div.col-md-10 a {
