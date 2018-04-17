@@ -968,6 +968,13 @@ input#PetPhoto.form-control.text-box.single-line {
     color: #e5e4dc;
 }
 
+input#ImageTitle.form-control.text-box.single-line {
+    background-color: transparent !important;
+    border-style: solid;
+    border-color: #f4e55f;
+    color: #e5e4dc;
+}
+
 div.col-md-10 a {
     margin-left: 150px;
 }
