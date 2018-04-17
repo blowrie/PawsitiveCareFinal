@@ -43,10 +43,10 @@ namespace PawsitiveCare.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Weight weight = db.Weights.Where(c => c.PetID == id).OrderByDescending(x => x.WeightDate).FirstOrDefault();
-            //if (weight == null)
-            //{
-            //    return HttpNotFound();
-            //}
+            if (weight == null)
+            {
+               return HttpNotFound();
+            }
             weight.WeightDate = DateTime.Now;
 
             return View(weight);

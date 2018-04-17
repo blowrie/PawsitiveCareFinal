@@ -24,7 +24,7 @@
 
                         </div>
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                        <div class="form-group">
+                        <div class="form-group col-md-12">
                             @*@Html.LabelFor(model => model.Weight1, htmlAttributes: new { @class = "control-label col-md-2" })*@
                             <p>Weight</p>
                             <div class="col-md-10">
@@ -32,7 +32,7 @@
                                 @Html.ValidationMessageFor(model => model.Weight1, "", new { @class = "text-danger" })
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-md-12">
                             @*@Html.LabelFor(model => model.WeightDate, htmlAttributes: new { @class = "control-label col-md-2" })*@
                             <p>Date weight was taken</p>
                             <div class="col-md-10">
