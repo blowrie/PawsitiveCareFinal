@@ -28,11 +28,28 @@ namespace PawsitiveCare.Controllers
             return View(weights.ToList());
         }
 
-        // GET: Weights/Create
-        public ActionResult Create()
+        public PartialViewResult SpecificPetWeights( int? id)
         {
-            ViewBag.PetID = new SelectList(db.Pets, "PetID", "PetName");
-            return View();
+            List < Weight > model = db.Weights.Where(w => w.PetID == id.Value).OrderByDescending(x => x.WeightDate).Take(3).ToList();
+            return PartialView("WeightParsh", model);
+        }
+
+
+        // GET: Weights/Create
+        public ActionResult Create(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Weight weight = db.Weights.Where(c => c.PetID == id).OrderByDescending(x => x.WeightDate).FirstOrDefault();
+            //if (weight == null)
+            //{
+            //    return HttpNotFound();
+            //}
+            weight.WeightDate = DateTime.Now;
+
+            return View(weight);
         }
 
         // POST: Weights/Create

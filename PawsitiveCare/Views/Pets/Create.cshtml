@@ -9,7 +9,7 @@
 <div class="outer">
     <div class="overlay">
         <div class="inner">
-            <div class="panel panel-default" id="homePanel">
+            <div class="panel panel-default" id="detailsPanel">
                 <div class="panel-body">
                     <div>
                         <h1>Create New Pet</h1>
@@ -18,80 +18,71 @@
                     {
                         @Html.AntiForgeryToken()
 
-                        <div class="form-horizontal">
+                    <div class="form-horizontal createPage">
 
 
-                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                            <div class="form-group col-md-12">
-                                @*@Html.LabelFor(model => model.PetName, htmlAttributes: new { @class = "control-label col-md-2" })*@
-                                <p>What is your pet's name?</p>
-                                <div>
-                                    @Html.EditorFor(model => model.PetName, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.PetName, "", new { @class = "text-danger" })
-                                </div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group col-md-8">
+                            @*@Html.LabelFor(model => model.PetName, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                            <p>What is your pet's name?</p>
+                            <div>
+                                @Html.EditorFor(model => model.PetName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PetName, "", new { @class = "text-danger" })
                             </div>
-                            <div class="form-group col-md-12">
-                                @*@Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label col-md-2" })*@
-                                <p>What is your pet's birthday?</p>
-                                <div>
-                                    @Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
-                                </div>
+                        </div>
+                        <div class="form-group col-md-8">
+                            @*@Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                            <p>What is your pet's birthday?</p>
+                            <div>
+                                @Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
                             </div>
+                        </div>
 
-                            <div class="form-group col-md-12">
-                                @*@Html.LabelFor(model => model.PetType, htmlAttributes: new { @class = "control-label col-md-2" })*@
-                                <p>What type of pet is this?</p>
-                                <div>
-                                    @Html.EditorFor(model => model.PetType, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.PetType, "", new { @class = "text-danger" })
-                                </div>
+                        <div class="form-group col-md-8">
+                            @*@Html.LabelFor(model => model.PetType, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                            <p>What type of pet is this?</p>
+                            <div>
+                                @Html.EditorFor(model => model.PetType, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PetType, "", new { @class = "text-danger" })
                             </div>
+                        </div>
 
-                            <div class="form-group col-md-12">
-                                @*@Html.LabelFor(model => model.Breed, htmlAttributes: new { @class = "control-label col-md-2" })*@
-                                <p>What breed of pet is this?</p>
-                                <div class="Box">
-                                    @Html.EditorFor(model => model.Breed, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.Breed, "", new { @class = "text-danger" })
-                                </div>
+                        <div class="form-group col-md-8">
+                            @*@Html.LabelFor(model => model.Breed, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                            <p>What breed of pet is this?</p>
+                            <div class="Box">
+                                @Html.EditorFor(model => model.Breed, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Breed, "", new { @class = "text-danger" })
                             </div>
+                        </div>
 
-                            <div class="form-group col-md-12">
-                                @*@Html.LabelFor(model => model.Weight, htmlAttributes: new { @class = "control-label col-md-2" })*@
-                                <p>How much does your pet weigh?</p>
-                                <div>
-                                    @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.Weight, "", new { @class = "text-danger" })
-                                </div>
+                        <div class="form-group col-md-8">
+                            @*@Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                            <p>Pet Photo</p>
+                            <div>
+                                @Html.EditorFor(model => model.PetPhoto, new { htmlAttributes = new { @class = "form-control", @value = "/Images/Apple_Jacks__34438.1440623833.500.750185624027" } })
+                                @Html.ValidationMessageFor(model => model.PetPhoto, "", new { @class = "text-danger" })
                             </div>
+                        </div>
 
-                            <div class="form-group col-md-12">
-                                <p>What date was this weight taken?</p>
-                                @*@Html.LabelFor(model => model.WeightDate, htmlAttributes: new { @class = "control-label col-md-2" })*@
-                                <div>
-                                    @Html.EditorFor(model => model.WeightDate, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.WeightDate, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group col-md-12">
-                                @*@Html.LabelFor(model => model.IsFixed, htmlAttributes: new { @class = "control-label col-md-2" })*@
-                                <p>Has your pet been fixed?</p>
-                                <div>
-                                    <div class="checkbox col-md-10">
-                                        @Html.EditorFor(model => model.IsFixed)
-                                        @Html.ValidationMessageFor(model => model.IsFixed, "", new { @class = "text-danger" })
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-11">
-                                    <input type="submit" value="Create" class="btn btn-default" />
+                        <div class="form-group col-md-8">
+                            @*@Html.LabelFor(model => model.IsFixed, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                            <p>Has your pet been fixed?</p>
+                            <div>
+                                <div class="checkbox col-md-8">
+                                    @Html.EditorFor(model => model.IsFixed)
+                                    @Html.ValidationMessageFor(model => model.IsFixed, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <input type="submit" value="Create" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
                     }
 
                     <div class="col-md-10">

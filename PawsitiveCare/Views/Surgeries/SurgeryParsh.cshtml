@@ -1,0 +1,17 @@
+﻿@model IEnumerable<PawsitiveCare.Surgery>
+
+
+@foreach (var item in Model) {
+<div class="well">
+
+    @Html.DisplayFor(modelItem => item.SurgeryDescription)
+
+    @Html.DisplayFor(modelItem => item.SurgeryDate)
+</div>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SurgeryID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SurgeryID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SurgeryID })
+        </td>*@
+}
+

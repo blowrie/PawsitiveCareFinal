@@ -14,8 +14,9 @@ namespace PawsitiveCare
 
 using System;
     using System.Collections.Generic;
-    
-public partial class Weight
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class Weight
 {
 
     public int WeightID { get; set; }
@@ -24,7 +25,8 @@ public partial class Weight
 
     public int PetID { get; set; }
 
-    public Nullable<System.DateTime> WeightDate { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
+        public Nullable<System.DateTime> WeightDate { get; set; }
 
 
 

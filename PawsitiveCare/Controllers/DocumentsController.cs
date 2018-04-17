@@ -28,6 +28,12 @@ namespace PawsitiveCare.Controllers
             return View(documents.ToList());
         }
 
+        public PartialViewResult SpecificPetDocuments(int? id)
+        {
+            List<Document> model = db.Documents.Where(w => w.PetID == id.Value).Take(3).ToList();
+            return PartialView("DocumentsParsh", model);
+        }
+
         // GET: Documents/Details/5
         public ActionResult Details(int? id)
         {

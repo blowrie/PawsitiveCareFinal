@@ -7,40 +7,72 @@
 <div class="outer">
     <div class="overlay">
         <div class="inner">
-            <div class="panel panel-default" id="homePanel">
+            <div class="panel panel-default" id="detailsPanel">
                 <div class="panel-body">
                     <div class="col-md-12">
-                        <h2>@Html.DisplayFor(model => model.PetName)</h2>
+                        <h2 id="detailsPetName">@Html.DisplayFor(model => model.PetName)</h2>
                         </div>
                     <div class="row">
                         <div class="col-md-3">
                             <img src=" @Html.DisplayFor(model => model.PetPhoto)" class="petDetailsPhoto"><br /><br /><br />
-                            <p>@Html.DisplayFor(model => model.BirthDate)</p>
-                            <p>@Html.DisplayFor(model => model.PetType)</p>
-                            <p>Fixed? @Html.DisplayFor(model => model.IsFixed)</p>
+                            <p>Birthdate: @Html.DisplayFor(model => model.BirthDate)</p>
+                            <p>Type: @Html.DisplayFor(model => model.PetType)</p>
+                            <p>Fixed?   @Html.DisplayFor(model => model.IsFixed)</p>
                             <p>
                                 @Html.ActionLink("Edit", "Edit", new { id = Model.PetID }) |
                                 @Html.ActionLink("Back to List", "Index")
                             </p>
                         </div>
-                        <div class="col-md-7">
-                            <h3>Weights</h3>
-                                @{ Html.RenderPartial("Weight"); }
-                                @Html.ActionLink("View More", "Index", "Weights", new { id = Model.PetID }, new { })
-                                @Html.ActionLink("Add Weight", "Create", "Weights", new { id = Model.PetID }, new { })
-                                <hr />
-                                <h3>Surgeries</h3>
-                                @Html.ActionLink("View More", "Index", "Surgeries", new { id = Model.PetID }, new { })
-                                @Html.ActionLink("Add Surgery", "Create", "Surgeries", new { id = Model.PetID }, new { })
-                                <hr />
-                                <h3>Documents</h3>
-                                @Html.ActionLink("View More", "Index", "Documents", new { id = Model.PetID }, new { })
-                                @Html.ActionLink("Add Document", "Create", "Documents", new { id = Model.PetID }, new { })
-                                <hr />
-                                <h3>Visits</h3>
-                                @Html.ActionLink("View More", "Index", "Visits", new { id = Model.PetID }, new { })
-                                @Html.ActionLink("Add Visit", "Create", "Visits", new { id = Model.PetID }, new { })
-                            </div>
+                        <div class="col-md-9">
+                            <hr />
+                            <h3>Weight Records</h3>
+                            <center>
+                                @Html.Action("SpecificPetWeights", "Weights")
+                            </center>
+                            <p class="detailsIcons">
+                                <a href="@Url.Action("Index", "Weights", new { id = Model.PetID })"><span class="icon-archive2" title="View All Records"></span></a>
+                                <a href="@Url.Action("Create", "Weights", new { id = Model.PetID })"><span class="icon-database-add" title="Record a Weight"></span></a>
+                            </p><br />
+                            @*<a href="@Url.Action("Index", "Weights", new { id = Model.PetID })"><span class="icon-archive2"></span></a>
+                            <a href="@Url.Action("Create", "Weights", new { id = Model.PetID })"><span class="icon-database-add"></span></a>*@
+                            @*@Html.ActionLink("Add Weight", "Create", "Weights", new { id = Model.PetID }, new { })*@
+                            <hr />
+                            <h3>Surgery Records</h3>
+                            <center>@Html.Action("SpecificPetSurgeries", "Surgeries")</center>
+                            <p class="detailsIcons">
+                                <a href="@Url.Action("Index", "Surgeries", new { id = Model.PetID })"><span class="icon-archive2" title="View All Records"></span></a>
+                                <a href="@Url.Action("Create", "Surgeries", new { id = Model.PetID })"><span class="icon-database-add" title="Add a Surgery Record"></span></a>
+                            </p><br />
+                            @*@Html.ActionLink("View More", "Index", "Surgeries", new { id = Model.PetID }, new { })
+                            @Html.ActionLink("Add Surgery", "Create", "Surgeries", new { id = Model.PetID }, new { })*@
+                            <hr />
+                            <h3>Documents</h3>
+                            <center>@Html.Action("SpecificPetDocuments", "Documents")</center>
+                            <p class="detailsIcons">
+                                <a href="@Url.Action("Index", "Documents", new { id = Model.PetID })"><span class="icon-archive2" title="View All Documents"></span></a>
+                                <a href="@Url.Action("Create", "Documents", new { id = Model.PetID })"><span class="icon-database-add" title="Upload a Document"></span></a>
+                            </p><br />
+                            @*@Html.ActionLink("View More", "Index", "Documents", new { id = Model.PetID }, new { })
+                            @Html.ActionLink("Add Document", "Create", "Documents", new { id = Model.PetID }, new { })*@
+                            <hr />
+                            <h3>Vet Visits</h3>
+                                <center>@Html.Action("SpecificPetVisits", "Visits")</center>
+                            <p class="detailsIcons">
+                                <a href="@Url.Action("Index", "Visits", new { id = Model.PetID })"><span class="icon-archive2" title="View All Records"></span></a>
+                                <a href="@Url.Action("Create", "Visits", new { id = Model.PetID })"><span class="icon-database-add" title="Record a Vet Visit"></span></a>
+                            </p><br />
+                            @*@Html.ActionLink("View More", "Index", "Visits", new { id = Model.PetID }, new { })
+                            @Html.ActionLink("Add Visit", "Create", "Visits", new { id = Model.PetID }, new { })*@
+                            <hr />
+                            <h3>Vaccination Records</h3>
+                            <center>@Html.Action("SpecificPetVaccinations", "Vaccinations")</center>
+                            <p class="detailsIcons">
+                                <a href="@Url.Action("Index", "Vaccinations", new { id = Model.PetID })"><span class="icon-archive2" title="View All Records"></span></a>
+                                <a href="@Url.Action("Create", "Vaccinations", new { id = Model.PetID })"><span class="icon-database-add" title="Add a Vaccination Record"></span></a>
+                            </p><br />
+                            @*@Html.ActionLink("View More", "Index", "Vaccinations", new { id = Model.PetID }, new { })
+                            @Html.ActionLink("Add Visit", "Create", "Vaccinations", new { id = Model.PetID }, new { })*@
+                        </div>
 
                         </div>
                     </div>

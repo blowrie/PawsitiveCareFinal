@@ -14,13 +14,15 @@ namespace PawsitiveCare
 
 using System;
     using System.Collections.Generic;
-    
-public partial class Surgery
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class Surgery
 {
 
     public int SurgeryID { get; set; }
 
-    public System.DateTime SurgeryDate { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
+        public System.DateTime SurgeryDate { get; set; }
 
     public string SurgeryDescription { get; set; }
 
