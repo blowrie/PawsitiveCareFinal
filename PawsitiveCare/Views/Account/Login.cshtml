@@ -20,14 +20,14 @@
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                         <div class="form-group loginFront" id="login-box">
                             @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                            <div class="col-md-9">
+                            <div class="col-md-5">
                                 @Html.TextBoxFor(m => m.Email, new { @class = "form-control form" })
                                 @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group loginFront">
                             @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                            <div class="col-md-9">
+                            <div class="col-md-5">
                                 @Html.PasswordFor(m => m.Password, new { @class = "form-control form" })
                                 @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                             </div>
