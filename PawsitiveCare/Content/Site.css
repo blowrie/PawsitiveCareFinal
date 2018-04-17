@@ -945,7 +945,6 @@ input#Breed.form-control.text-box.single-line {
     border-style: solid;
     border-color: #f4e55f;
     color: #e5e4dc;
-    width: 465px !important;
 }
 
 input#Weight.form-control.text-box.single-line {
@@ -956,6 +955,13 @@ input#Weight.form-control.text-box.single-line {
 }
 
 input#WeightDate.form-control.text-box.single-line {
+    background-color: transparent !important;
+    border-style: solid;
+    border-color: #f4e55f;
+    color: #e5e4dc;
+}
+
+input#PetPhoto.form-control.text-box.single-line {
     background-color: transparent !important;
     border-style: solid;
     border-color: #f4e55f;
