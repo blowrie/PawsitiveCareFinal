@@ -18,11 +18,11 @@
                     {
                         @Html.AntiForgeryToken()
 
-                    <div class="form-horizontal">
+                    <div class="form-horizontal createPage">
 
 
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-8">
                             @*@Html.LabelFor(model => model.PetName, htmlAttributes: new { @class = "control-label col-md-2" })*@
                             <p>What is your pet's name?</p>
                             <div>
@@ -30,7 +30,7 @@
                                 @Html.ValidationMessageFor(model => model.PetName, "", new { @class = "text-danger" })
                             </div>
                         </div>
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-8">
                             @*@Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label col-md-2" })*@
                             <p>What is your pet's birthday?</p>
                             <div>
@@ -39,7 +39,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-8">
                             @*@Html.LabelFor(model => model.PetType, htmlAttributes: new { @class = "control-label col-md-2" })*@
                             <p>What type of pet is this?</p>
                             <div>
@@ -48,7 +48,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-8">
                             @*@Html.LabelFor(model => model.Breed, htmlAttributes: new { @class = "control-label col-md-2" })*@
                             <p>What breed of pet is this?</p>
                             <div class="Box">
@@ -57,7 +57,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-8">
                             @*@Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label col-md-2" })*@
                             <p>Pet Photo</p>
                             <div>
@@ -66,11 +66,11 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-8">
                             @*@Html.LabelFor(model => model.IsFixed, htmlAttributes: new { @class = "control-label col-md-2" })*@
                             <p>Has your pet been fixed?</p>
                             <div>
-                                <div class="checkbox col-md-10">
+                                <div class="checkbox col-md-8">
                                     @Html.EditorFor(model => model.IsFixed)
                                     @Html.ValidationMessageFor(model => model.IsFixed, "", new { @class = "text-danger" })
                                 </div>
@@ -78,7 +78,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-11">
+                            <div class="col-md-8">
                                 <input type="submit" value="Create" class="btn btn-default" />
                             </div>
                         </div>

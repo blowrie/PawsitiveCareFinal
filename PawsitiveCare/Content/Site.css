@@ -254,27 +254,23 @@ h2.Login {
 }
 
 h4.Login {
-    /*padding-right: 500px;
-    padding-left: 500px;*/
     padding-top: 20px;
     font: 'Quicksand';
     color: #f4e55f;
 }
 
-.form-group {
-    /*padding-right: 400px;
-    padding-left: 400px;*/
+.form-group.loginFront {
     padding-top: 20px;
     font: 'Quicksand'!important;
     color: #f4e55f;
 }
 
-form.form-horizontal {
+form.form-horizontal.login {
     margin-left: 20px;
 
 }
 
-.form-control {
+.form-control.form {
     background: transparent!important;
     border-bottom: 1px solid white;
     border-top: 0px;
@@ -288,12 +284,12 @@ form.form-horizontal {
 
 }
 
-.form-control:focus {
+.form-control.form:focus {
     background: transparent!important;
     border-bottom: 1px solid white;
 }
 
-.form-control:active {
+.form-control.form:active {
 
     background: transparent!important;
 }
@@ -308,8 +304,6 @@ div.checkbox {
 
 .LoginButton {
     font: 'Quicksand';
-    /*margin-right: 300px;*/
-    /*padding-left: 250px;*/
     text-align:center;
     align-content:center;
 }
@@ -320,8 +314,6 @@ div.checkbox {
        text-align: center;
         color: #e5e4dc;
         border: 1px solid;
-        /*height: 30px;
-        width: 70px;*/
         padding-top: 10px;
         padding-right: 20px;
         padding-left: 20px;
@@ -945,6 +937,7 @@ input#PetName.form-control.text-box.single-line {
     border-style: solid;
     border-color: #f4e55f;
     color: #e5e4dc;
+    width: 100px;
 }
 
 input#BirthDate.form-control.text-box.single-line {
@@ -1004,5 +997,12 @@ input#ImageTitle.form-control.text-box.single-line {
 
 input#ImageTitle.form-control.text-box.single-line:focus {
     border: 1px solid white;
+}
+
+.form-horizontal.createPage {
+
+    text-align: center;
+    align-content: center;
+    margin-left: 200px;
 }
 
